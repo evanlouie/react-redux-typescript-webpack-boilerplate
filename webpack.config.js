@@ -6,16 +6,21 @@ module.exports = {
     resolve: {
         extensions: [
             '.ts', '.tsx',
-            '.js', '.jsx'
+            '.js', '.jsx',
         ],
     },
     module: {
         loaders: [
-            // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader' then 'babel-loader'.
+            // All .ts(x) files will be piped through ts-loader then babel
             {
                 test: /\.tsx?$/,
                 loader: 'babel-loader!ts-loader',
-            }
+            },
+            // All .js(x) files will be piped through babel
+            {
+                test: /\.jsx?$/,
+                loader: 'babel-loader',
+            },
         ],
-    }
+    },
 }
