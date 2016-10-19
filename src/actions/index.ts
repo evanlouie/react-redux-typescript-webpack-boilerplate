@@ -39,7 +39,7 @@ export function addJoke(text: string) {
  */
 export function getRandomChuckNorrisJoke() {
     return <T>(dispatch: Redux.Dispatch<T>) => {
-        return fetch("http://api.icndb.com/jokes/random").then((response) => {
+        return fetch("https://api.icndb.com/jokes/random").then((response) => {
             return response.json();
         }).then((json) => {
             const joke: string = json.value.joke;
