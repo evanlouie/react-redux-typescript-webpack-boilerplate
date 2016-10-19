@@ -1,12 +1,16 @@
-import { addError, addLog } from "./actions";
+import * as Actions from "./actions";
 import Homepage from "./containers/Homepage";
 import { helloApp } from "./reducers";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
+import thunk from "redux-thunk";
 
-const store = createStore(helloApp);
+const store = createStore(
+    helloApp,
+    applyMiddleware(thunk),
+);
 // Log the initial state
 console.log(store.getState());
 
@@ -16,8 +20,11 @@ let unsubscribe = store.subscribe(() => {
     console.log(store.getState());
 });
 
-store.dispatch(addLog("Hello from the react/redux/typescript/webpack boilerplate"));
-store.dispatch(addError("Both of these messages were dispatched via redux actions"));
+store.dispatch(Actions.addLog("Hello from the react/redux/typescript/webpack boilerplate"));
+store.dispatch(Actions.addError("Both of these messages were dispatched via redux actions"));
+store.dispatch(Actions.getRandomChuckNorrisJoke());
+// unsubscribe from store updates
+unsubscribe();
 
 const mount: Element | null = document.querySelector("#app");
 
@@ -27,7 +34,7 @@ if (mount !== null) {
             <Homepage />
         </Provider>,
         mount
-    )
+    );
 } else {
     console.error(`#app not found in document`);
 }

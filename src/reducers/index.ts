@@ -1,4 +1,4 @@
-import { ADD_ERROR, ADD_LOG } from "../actions";
+import { ADD_ERROR, ADD_JOKE, ADD_LOG, ADD_MESSAGE } from "../actions";
 import { combineReducers } from "redux";
 
 const initialState = {
@@ -12,10 +12,28 @@ const initialState = {
         "TypeScript2",
         "Webpack2",
     ],
+    jokes: [],
+    randomJunk: {
+        foo: "bar",
+    },
 };
 
 function greetings(state = initialState, action: any) {
     switch (action.type) {
+        case ADD_MESSAGE:
+            return Object.assign({}, state, {
+                including: [
+                    ...state.including,
+                    action.text,
+                ],
+            });
+        case ADD_JOKE:
+            return Object.assign({}, state, {
+                jokes: [
+                    ...state.jokes,
+                    action.text,
+                ],
+            });
         default:
             return state;
     }
@@ -46,4 +64,3 @@ export const helloApp = combineReducers({
     greetings,
     logs,
 });
-
