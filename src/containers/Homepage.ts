@@ -1,8 +1,8 @@
+import { connect } from "react-redux";
+import * as Redux from "react-redux";
 import * as Actions from "../actions";
 import Greeting from "../components/Greeting";
 import { IGreetingActions, IGreetingState } from "../components/Greeting";
-import { connect } from "react-redux";
-import * as Redux from "react-redux";
 
 /**
  * You only need 2 functions for a container: mapStateToProps and mapDispatchToProps

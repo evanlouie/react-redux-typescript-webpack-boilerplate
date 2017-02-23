@@ -1,11 +1,11 @@
-import * as Actions from "./actions";
-import Homepage from "./containers/Homepage";
-import { helloApp } from "./reducers";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
+import * as Actions from "./actions";
+import Homepage from "./containers/Homepage";
+import { helloApp } from "./reducers";
 
 const store = createStore(
     helloApp,
@@ -16,7 +16,7 @@ console.log(store.getState());
 
 // Every time the state changes, log it
 // Note that subscribe() returns a function for unregistering the listener
-let unsubscribe = store.subscribe(() => {
+const unsubscribe = store.subscribe(() => {
     console.log(store.getState());
 });
 
@@ -33,7 +33,7 @@ if (mount !== null) {
         <Provider store={store}>
             <Homepage />
         </Provider>,
-        mount
+        mount,
     );
 } else {
     console.error(`#app not found in document`);

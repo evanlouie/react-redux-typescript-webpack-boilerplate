@@ -1,5 +1,5 @@
-import { ADD_ERROR, ADD_JOKE, ADD_LOG, ADD_MESSAGE } from "../actions";
 import { combineReducers } from "redux";
+import { ADD_ERROR, ADD_JOKE, ADD_LOG, ADD_MESSAGE } from "../actions";
 
 const initialState = {
     greeting: "This is a hyper minimalist boilerplate to get started with:",
