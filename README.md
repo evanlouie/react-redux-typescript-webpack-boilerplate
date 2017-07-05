@@ -15,10 +15,17 @@ This is just a hyper minimalist boilerplate to get started with:
 ## Installation
 
 ```bash
-npm install -g yarn
-yarn
-yarn run build
+npm install
+npm run build
 ```
+
+## Run
+
+```bash
+http-server -p 9999
+```
+
+Visit: `localhost:9999`
 
 ## Demo
 
