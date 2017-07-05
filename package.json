@@ -19,6 +19,7 @@
         "babel-loader": "^7.1.1",
         "babel-plugin-transform-object-assign": "^6.22.0",
         "babel-preset-latest": "^6.24.1",
+        "http-server": "^0.10.0",
         "ts-loader": "^2.2.2",
         "tslint": "^5.5.0",
         "typescript": "^2.4.1",
@@ -26,7 +27,6 @@
     },
     "dependencies": {
         "@types/isomorphic-fetch": "^0.0.34",
-        "http-server": "^0.10.0",
         "isomorphic-fetch": "^2.2.1",
         "react": "^15.6.1",
         "react-dom": "^15.6.1",
