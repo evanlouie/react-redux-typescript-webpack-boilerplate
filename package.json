@@ -1,39 +1,43 @@
 {
-    "name": "react-redux-typescript-webpack-boilerplate",
-    "version": "1.0.0",
-    "description": "A hyper minimalist boilerplate to get started with React/Redux/Typescript2/Babel6/Webpack2",
-    "main": "./dist/index.js",
-    "scripts": {
-        "build": "./node_modules/.bin/webpack -p --progress",
-        "watch": "./node_modules/.bin/webpack -d --progress --watch"
-    },
-    "author": "Evan Louie <mail@evanlouie.com> (https://evanlouie.com)",
-    "license": "MIT",
-    "devDependencies": {
-        "@types/react": "^15.0.34",
-        "@types/react-dom": "^15.5.1",
-        "@types/react-redux": "^4.4.45",
-        "@types/react-router": "^4.0.12",
-        "@types/react-router-redux": "^5.0.3",
-        "babel-core": "^6.25.0",
-        "babel-loader": "^7.1.1",
-        "babel-plugin-transform-object-assign": "^6.22.0",
-        "babel-preset-latest": "^6.24.1",
-        "http-server": "^0.10.0",
-        "ts-loader": "^2.2.2",
-        "tslint": "^5.5.0",
-        "typescript": "^2.4.1",
-        "webpack": "^3.0.0"
-    },
-    "dependencies": {
-        "@types/isomorphic-fetch": "^0.0.34",
-        "isomorphic-fetch": "^2.2.1",
-        "react": "^15.6.1",
-        "react-dom": "^15.6.1",
-        "react-redux": "^5.0.5",
-        "react-router": "^4.1.1",
-        "react-router-redux": "^4.0.8",
-        "redux": "^3.7.1",
-        "redux-thunk": "^2.2.0"
-    }
+  "name": "react-redux-typescript-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "A hyper minimalist boilerplate to get started with React/Redux/Typescript2/Babel6/Webpack2",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "webpack -p --progress",
+    "watch": "webpack -d --progress --watch",
+    "dev": "webpack-dev-server --hot --inline"
+  },
+  "author": "Evan Louie <mail@evanlouie.com> (https://evanlouie.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/babel-core": "^6.25.2",
+    "@types/react": "^16.0.5",
+    "@types/react-dom": "^15.5.4",
+    "@types/react-redux": "^5.0.8",
+    "@types/react-router": "^4.0.15",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "@types/typescript": "^2.0.0",
+    "@types/webpack": "^3.0.10",
+    "@types/webpack-dev-server": "^2.4.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "http-server": "^0.10.0",
+    "ts-loader": "^2.3.7",
+    "tslint": "^5.7.0",
+    "tslint-config-prettier": "^1.5.0",
+    "typescript": "^2.5.2",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  }
 }
